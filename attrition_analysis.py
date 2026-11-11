@@ -30,7 +30,7 @@ for col in remove:
 df["Attrition"] = df["Attrition"].map({"Yes": 1, "No": 0})
 
 # Convert categorical columns into numbers
-cat_cols = df.select_dtypes(include=["object", "str"]).columns
+cat_cols = df.select_dtypes(include=["object", "string"]).columns
 
 for col in cat_cols:
     encoder = LabelEncoder()
